@@ -1,1 +1,38 @@
-<h1>Home page bro<h1>
+<div class="front-page-wrapper">
+  <%= render "shared/mobile_menu" %>
+  <h1 class="mobile-site-name site-name">le gardin du josh</h1>
+  <section class="front-page">
+    <aside class="container-aside">
+      <header>
+        <div class="site-name">le gardin du josh</div>
+        <nav>
+          <ul class="menu">
+            <%= render "shared/nav_menu" %>
+          </ul>
+        </nav>
+      </header>
+      <footer class="footer-aside">
+        <ul>
+          <li class="mb-12">
+            <div>Refshalevej 96</div>
+            <div>1432 Copenhagen K</div>
+            <div>
+              <a
+                href="https://goo.gl/maps/qivmSfBRyTC9MbUY8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See map</a
+              >
+            </div>
+          </li>
+          <li>Phone: xxx-xxx-xxx</li>
+          <li>Hours: Monday-Saturday, 17:00-23:00</li>
+        </ul>
+      </footer>
+    </aside>
+    <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
+  </section>
+  <%= render "shared/footer" %> <br />
+</div>
+
+<%= javascript_pack_tag 'hamburger' %>
