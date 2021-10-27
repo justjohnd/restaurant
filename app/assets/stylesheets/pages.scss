@@ -114,6 +114,7 @@ $displays: (none, block, flex);
 
 $color-primary: #333;
 $color-secondary: #046120;
+$color-active: #7096e7;
 
 $font-primary: 'Work Sans', sans-serif;
 
@@ -157,6 +158,21 @@ ul {
 a.menu-item,
 a.menu-item:hover {
   text-decoration: none;
+}
+
+@mixin capsule {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid;
+  width: 100%;
+  padding: 6px;
+}
+
+.btn {
+  @include capsule;
+  background-color: $color-active;
+  border: $color-active;
+  color: #fff;
 }
 
 //Front page
@@ -542,4 +558,42 @@ a.menu-item:hover {
 // Authentication notices
 .alert {
   background-color: red;
+}
+
+//Account pages
+.account-container {
+  margin: 0 auto 100px auto;
+  width: 340px;
+}
+
+.form-title {
+  margin-bottom: 24px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.form-input {
+  margin-top: 8px;
+  @include capsule;
+  box-sizing: border-box;
+}
+
+.field-confirm {
+  margin-top: 80px;
+}
+
+.cancel-container {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  border: none;
+}
+
+.btn-cancel:hover {
+  text-decoration: underline;
 }
