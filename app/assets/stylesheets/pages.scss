@@ -600,37 +600,27 @@ a.menu-item:hover {
 
 // Fields to show on banner, top right corner
 .logout-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 16px;
+  display: none;
 }
 
-a.account-link {
-  color: #fff;
-}
-
-.front-page-wrapper {
-  & .logout-container {
+@media (min-width: 992px) {
+  .logout-container {
+    position: absolute;
+    top: 20px;
     right: 50px;
+    display: flex;
+    gap: 16px;
+
+    & a.account-link {
+      color: $color-primary;
+    }
   }
 
-  & a.account-link {
-    color: $color-primary;
-  }
-}
-
-.mobile-menu {
-  & .logout-container {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    right: 0;
-    padding-bottom: 24px;
-  }
-
-  & a.account-link {
+  .banner a.account-link {
     color: #fff;
   }
+}
+
+.mobile-menu a.account-link {
+  color: #fff;
 }
