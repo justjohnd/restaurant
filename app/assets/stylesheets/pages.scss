@@ -358,7 +358,7 @@ a.menu-item:hover {
 }
 
 .mobile-menu {
-  height: 30vh;
+  height: 40vh;
   background-color: $color-primary;
   position: absolute;
   top: 60px;
@@ -560,7 +560,7 @@ a.menu-item:hover {
   background-color: red;
 }
 
-//Account pages
+//Account pages, includes Account, Sign-up, Sign-in, Forgot password
 .account-container {
   margin: 0 auto 100px auto;
   width: 340px;
@@ -596,4 +596,41 @@ a.menu-item:hover {
 
 .btn-cancel:hover {
   text-decoration: underline;
+}
+
+// Fields to show on banner, top right corner
+.logout-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+a.account-link {
+  color: #fff;
+}
+
+.front-page-wrapper {
+  & .logout-container {
+    right: 50px;
+  }
+
+  & a.account-link {
+    color: $color-primary;
+  }
+}
+
+.mobile-menu {
+  & .logout-container {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    right: 0;
+    padding-bottom: 24px;
+  }
+
+  & a.account-link {
+    color: #fff;
+  }
 }

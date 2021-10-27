@@ -1,0 +1,11 @@
+  
+<div class="logout-container">
+  <% if user_signed_in? %>
+    <p class="control">
+      <%= link_to "Account", edit_user_registration_path, class: "account-link" %>
+    </p>
+    <p>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "account-link" %>
+    </p>
+  <% end %>
+</div>

@@ -22,7 +22,7 @@
     <% end %> <% if flash[:alert] %>
       <p class="alert"><%= alert %></p>
     <% end %>
-  </br>
-  <%= yield %>
-</body>
+    <%= yield %>
+    <%= javascript_pack_tag 'hamburger' %>
+  </body>
 </html>
