@@ -16,7 +16,7 @@
     </div>
     <div class="field">
       <%= f.label :nameFirst, "First Name" %><br />
-      <%= f.text_field :nameLast, autocomplete: "nameFirst", class: "form-input" %>
+      <%= f.text_field :nameFirst, autocomplete: "nameFirst", class: "form-input" %>
     </div>
     <div class="field">
       <%= f.label :userName, "Username" %><br />
@@ -34,7 +34,7 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input" %>
     </div>
-    <div class="field field-confirm">
+    <div class="field">
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "current-password", class: "form-input" %>
     </div>
