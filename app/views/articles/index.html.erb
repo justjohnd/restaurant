@@ -13,7 +13,9 @@
       </li>
     <% end %>
   </ul>
-  <%= link_to "New Article", new_article_path %>
+  <% if user_signed_in? %>
+    <%= link_to "New Article", new_article_path %>
+  <% end %>
 </section>
 <div class="footer-bottom-wrapper">
   <h3 class="footer-bottom-title">CAFE DU JOSH</h3>
