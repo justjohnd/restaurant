@@ -5,7 +5,7 @@
     <% @articles.each do | article | %>
       <li class="article-title"><%= link_to article.title, article %></li>
       <li class="article-author">
-        By <%= article.author %> - <%= article.created_at.strftime("%d %b. %Y") %>
+        By <%= article.user.userName %> - <%= article.created_at.strftime("%d %b. %Y") %>
       </li>
       <li class="article-body">
         <%= truncate(article.body, length: 300) {link_to "...Read More", article}

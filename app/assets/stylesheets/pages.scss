@@ -177,7 +177,11 @@ a.menu-item:hover {
   color: #fff;
 }
 
-@mixin container($width: 340px) {
+//Widths for containers
+$narrow: 340px;
+$medium: 600px;
+
+@mixin container($width: $narrow) {
   margin: 0 auto 100px auto;
   max-width: $width;
   width: 90%;
@@ -565,7 +569,7 @@ a.menu-item:hover {
 
 //New article page
 .new-article-container {
-  @include container($width: 600px);
+  @include container($width: $medium);
 }
 
 .form-input.body-field {
