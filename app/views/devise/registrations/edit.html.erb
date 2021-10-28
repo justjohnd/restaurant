@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<div class="account-container">
+<div class="container">
   <h1 class=form-title>Edit <%= resource_name.to_s.humanize %></h1>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -39,10 +39,11 @@
       <%= f.password_field :current_password, autocomplete: "current-password", class: "form-input" %>
     </div>
     <div class="actions">
+      <%= button_tag "Reset Form", type: :reset, class: "btn-link mb-12" %>
       <%= f.submit "Update", class: "btn" %>
     </div>
   <% end %>
   <div class="cancel-container">
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn-cancel" %></p>
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you absolutely sure? Cancelling your account will delete all posts." }, method: :delete, class: "btn-link" %></p>
   </div>
 </div>

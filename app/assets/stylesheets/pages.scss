@@ -582,7 +582,7 @@ $medium: 600px;
 }
 
 //Account pages, includes Account, Sign-up, Sign-in, Forgot password
-.account-container {
+.container {
   @include container;
 }
 
@@ -609,12 +609,12 @@ $medium: 600px;
   text-align: center;
 }
 
-.btn-cancel {
+.btn-link {
   background-color: #fff;
   border: none;
 }
 
-.btn-cancel:hover {
+.btn-link:hover {
   text-decoration: underline;
 }
 
