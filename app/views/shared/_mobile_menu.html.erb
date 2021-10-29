@@ -9,5 +9,15 @@
   </div>
   <ul class="mobile-menu d-none">
     <%= render "shared/nav_menu" %>
+    <li class="menu-item">
+      <% if user_signed_in? %>
+        <p>
+          <%= link_to "Account", edit_user_registration_path, class: "account-link" %>
+        </p>
+        <p>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "account-link" %>
+        </p>
+      <% end %>
+    </li>
   </ul>
 </section>

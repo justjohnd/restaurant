@@ -1,34 +1,20 @@
-<%= render "shared/mobile_menu" %>
-<header class="banner">
-  <%= image_tag "cover-img-1200.jpg", :class => "front-page-img"%>
-  <nav class="banner-nav-wrapper">
-    <div class="site-name"><%= link_to "le gardin du josh", root_path %></div>
-    <ul class="menu">
-      <%= render "shared/nav_menu" %>
-    </ul>
-  </nav>
-</header>
-
+<%= render "shared/header" %>
 <section class="articles">
   <h1 class="articles-title">Recent News</h1>
-
   <ul class="article">
     <% @articles.each do | article | %>
-    <li class="article-title"><%= link_to article.title, article %></li>
-    <li class="article-author">
-      By <%= article.author %> - <%= article.created_at.strftime("%d %b. %Y") %>
-    </li>
-    <li class="article-body">
-      <%= truncate(article.body, length: 300) {link_to "...Read More", article}
+      <li class="article-title"><%= link_to article.title, article %></li>
+      <li class="article-author">
+        By <%= article.user.userName %> - <%= article.created_at.strftime("%d %b. %Y") %>
+      </li>
+      <li class="article-body">
+        <%= truncate(article.body, length: 300) {link_to "...Read More", article}
       %>
-    </li>
+      </li>
     <% end %>
   </ul>
-  <%= link_to "New Article", new_article_path %>
+  <% if user_signed_in? %>
+    <%= link_to "New Article", new_article_path %>
+  <% end %>
 </section>
-<div class="footer-bottom-wrapper">
-  <h3 class="footer-bottom-title">CAFE DU JOSH</h3>
-  <%= render "shared/footer" %>
-</div>
-
-<%= javascript_pack_tag 'hamburger' %>
+<%= render "shared/footer_with_wrapper" %>

@@ -54,3 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Include font-awesome
 gem 'font-awesome-rails'
+
+#Add devise for authentication
+gem 'devise'

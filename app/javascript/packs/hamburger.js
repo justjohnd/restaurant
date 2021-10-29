@@ -22,3 +22,5 @@ hamburger.addEventListener('click', () => {
     mobileMenu.classList.add('menu-visible');
   }
 });
+
+console.log('hallo');

@@ -114,6 +114,7 @@ $displays: (none, block, flex);
 
 $color-primary: #333;
 $color-secondary: #046120;
+$color-active: #7096e7;
 
 $font-primary: 'Work Sans', sans-serif;
 
@@ -157,6 +158,33 @@ ul {
 a.menu-item,
 a.menu-item:hover {
   text-decoration: none;
+}
+
+//This is used for rounded input fields and their corresponding buttons
+@mixin capsule {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid;
+  width: 100%;
+  padding: 6px;
+}
+
+//Standard button
+.btn {
+  @include capsule;
+  background-color: $color-active;
+  border: $color-active;
+  color: #fff;
+}
+
+//Widths for containers
+$narrow: 340px;
+$medium: 600px;
+
+@mixin container($width: $narrow) {
+  margin: 0 auto 100px auto;
+  max-width: $width;
+  width: 90%;
 }
 
 //Front page
@@ -342,7 +370,7 @@ a.menu-item:hover {
 }
 
 .mobile-menu {
-  height: 30vh;
+  height: 40vh;
   background-color: $color-primary;
   position: absolute;
   top: 60px;
@@ -537,4 +565,94 @@ a.menu-item:hover {
 
 .article-body {
   margin-bottom: 40px;
+}
+
+//Area for edit options for user when logged in
+.edit-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+
+  & ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+//New article page
+.new-article-container {
+  @include container($width: $medium);
+}
+
+.form-input.body-field {
+  height: 300px;
+}
+
+// Authentication notices
+.alert {
+  background-color: red;
+}
+
+//Account pages, includes Account, Sign-up, Sign-in, Forgot password
+.container {
+  @include container;
+}
+
+.form-title {
+  margin-bottom: 24px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.form-input {
+  margin-top: 8px;
+  @include capsule;
+  box-sizing: border-box;
+}
+
+.field-confirm {
+  margin-top: 80px;
+}
+
+.cancel-container {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.btn-link {
+  background-color: #fff;
+  border: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+// Fields to show on banner, top right corner
+.logout-container {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .logout-container {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    gap: 16px;
+
+    & a.account-link {
+      color: $color-primary;
+    }
+  }
+
+  .banner a.account-link {
+    color: #fff;
+  }
+}
+
+.mobile-menu a.account-link {
+  color: #fff;
 }
