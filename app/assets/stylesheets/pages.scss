@@ -580,6 +580,24 @@ $medium: 600px;
   text-decoration: none;
 }
 
+//Errors pages
+.error-page {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+
+  & .container-aside {
+    height: 100vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+  }
+}
+
+.error-container {
+  text-align: center;
+}
+
 //Utility Classes
 $displayTypes: (none, flex, block);
 
