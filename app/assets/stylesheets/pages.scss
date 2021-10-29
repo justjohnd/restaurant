@@ -567,6 +567,18 @@ $medium: 600px;
   margin-bottom: 40px;
 }
 
+//Area for edit options for user when logged in
+.edit-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+
+  & ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+
 //New article page
 .new-article-container {
   @include container($width: $medium);
