@@ -480,6 +480,17 @@ $medium: 600px;
   height: 300px;
 }
 
+.article-image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
 // Authentication notices
 .alert {
   background-color: red;

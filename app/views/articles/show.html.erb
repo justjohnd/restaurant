@@ -4,6 +4,9 @@
   <p class="article-subtitle">
     By <%= @article.user.userName %> - <%= @article.created_at.strftime("%d %b. %Y") %>
   </p>
+  <div class="article-image">
+    <%= image_tag(@article.image, class: "image") %>
+  </div>
   <p><%= @article.body %></p>
 </section>
 <div class="edit-section">
