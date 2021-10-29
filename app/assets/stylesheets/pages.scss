@@ -1,117 +1,5 @@
 @import 'font-awesome';
 
-$displayTypes: (none, flex, block);
-
-@each $display in $displayTypes {
-  .d-#{display} {
-    display: #{display};
-  }
-}
-
-$spaceAmounts: (6, 12, 16, 20, 24, 28, 36, 48, auto);
-
-@each $space in $spaceAmounts {
-  @if $space==auto {
-    .m-#{$space} {
-      margin: #{$space};
-    }
-
-    .mx-#{$space} {
-      margin-left: #{$space};
-      margin-right: #{$space};
-    }
-
-    .my-#{$space} {
-      margin-top: #{$space};
-      margin-bottom: #{$space};
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space};
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space};
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space};
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space};
-    }
-  } @else {
-    .m-#{$space} {
-      margin: #{$space}px;
-    }
-
-    .mx-#{$space} {
-      margin-left: #{$space}px;
-      margin-right: #{$space}px;
-    }
-
-    .my-#{$space} {
-      margin-top: #{$space}px;
-      margin-bottom: #{$space}px;
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space}px;
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space}px;
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space}px;
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space}px;
-    }
-
-    .p-#{$space} {
-      padding: #{$space}px;
-    }
-
-    .px-#{$space} {
-      padding-left: #{$space}px;
-      padding-right: #{$space}px;
-    }
-
-    .py-#{$space} {
-      padding-top: #{$space}px;
-      padding-bottom: #{$space}px;
-    }
-
-    .pl-#{$space} {
-      padding-left: #{$space}px;
-    }
-
-    .pr-#{$space} {
-      padding-right: #{$space}px;
-    }
-
-    .pb-#{$space} {
-      padding-bottom: #{$space}px;
-    }
-
-    .pt-#{$space} {
-      padding-top: #{$space}px;
-    }
-  }
-}
-
-$displays: (none, block, flex);
-
-@each $display in $displays {
-  .d-#{$display} {
-    display: #{$display};
-  }
-}
-
 $color-primary: #333;
 $color-secondary: #046120;
 $color-active: #7096e7;
@@ -126,12 +14,12 @@ $font-primary: 'Work Sans', sans-serif;
 
 h1 {
   color: $color-primary;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 
@@ -185,6 +73,49 @@ $medium: 600px;
   margin: 0 auto 100px auto;
   max-width: $width;
   width: 90%;
+}
+
+// Page styles
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0 auto 100px auto;
+
+  & h1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-container {
+    width: 50vw;
+  }
+}
+
+.articles-title {
+  margin-bottom: 20px;
+}
+
+.article {
+  font-weight: 300;
+}
+
+.article-title {
+  font-size: 20px;
+}
+
+.article-subtitle {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.article-body {
+  margin-bottom: 36px;
+}
+
+.article-body:last-child {
+  margin-bottom: 0;
 }
 
 //Front page
@@ -528,46 +459,7 @@ $medium: 600px;
   }
 }
 
-//Articles page
-.articles {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90vw;
-  margin: 0 auto 100px auto;
-
-  & h1 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 576px) {
-  .articles {
-    width: 50vw;
-  }
-}
-
-.articles-title {
-  margin-bottom: 20px;
-}
-
-.article {
-  font-weight: 300;
-}
-
-.article-title {
-  font-size: 20px;
-}
-
-.article-author {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.article-body {
-  margin-bottom: 40px;
-}
-
-//Area for edit options for user when logged in
+//Area for edit options on Article page for user when logged in
 .edit-section {
   display: flex;
   justify-content: center;
@@ -655,4 +547,129 @@ $medium: 600px;
 
 .mobile-menu a.account-link {
   color: #fff;
+}
+
+//Food and wine page
+.menu-title {
+  font-weight: 400;
+}
+
+//Reservations page
+.btn-contact {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: unset;
+  height: unset;
+  padding: 12px;
+}
+
+.btn-contact > a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+//Utility Classes
+$displayTypes: (none, flex, block);
+
+@each $display in $displayTypes {
+  .d-#{display} {
+    display: #{display};
+  }
+}
+
+$spaceAmounts: (6, 12, 16, 20, 24, 28, 36, 48, auto);
+
+@each $space in $spaceAmounts {
+  @if $space==auto {
+    .m-#{$space} {
+      margin: #{$space};
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space};
+      margin-right: #{$space};
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space};
+      margin-bottom: #{$space};
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space};
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space};
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space};
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space};
+    }
+  } @else {
+    .m-#{$space} {
+      margin: #{$space}px;
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space}px;
+      margin-right: #{$space}px;
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space}px;
+      margin-bottom: #{$space}px;
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space}px;
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space}px;
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space}px;
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space}px;
+    }
+
+    .p-#{$space} {
+      padding: #{$space}px;
+    }
+
+    .px-#{$space} {
+      padding-left: #{$space}px;
+      padding-right: #{$space}px;
+    }
+
+    .py-#{$space} {
+      padding-top: #{$space}px;
+      padding-bottom: #{$space}px;
+    }
+
+    .pl-#{$space} {
+      padding-left: #{$space}px;
+    }
+
+    .pr-#{$space} {
+      padding-right: #{$space}px;
+    }
+
+    .pb-#{$space} {
+      padding-bottom: #{$space}px;
+    }
+
+    .pt-#{$space} {
+      padding-top: #{$space}px;
+    }
+  }
 }

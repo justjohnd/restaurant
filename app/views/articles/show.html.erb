@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
-<section class="articles">
+<section class="page-container">
   <h1><%= @article.title %></h1>
-  <p class="article-author">
+  <p class="article-subtitle">
     By <%= @article.user.userName %> - <%= @article.created_at.strftime("%d %b. %Y") %>
   </p>
   <p><%= @article.body %></p>
