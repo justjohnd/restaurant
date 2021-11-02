@@ -1,0 +1,39 @@
+<div class="front-page-wrapper">
+  <%= render "shared/logout_links" %>
+  <%= render "shared/mobile_menu" %>
+  <h1 class="mobile-site-name site-name">le gardin du josh</h1>
+  <section class="error-page">
+    <aside class="container-aside">
+      <header>
+        <div class="site-name">le gardin du josh</div>
+        <nav>
+          <ul class="menu">
+            <%= render "shared/nav_menu" %>
+          </ul>
+        </nav>
+      </header>
+      <footer class="footer-aside">
+        <ul>
+          <li class="mb-12">
+            <div>Refshalevej 96</div>
+            <div>1432 Copenhagen K</div>
+            <div>
+              <a
+                href="https://goo.gl/maps/qivmSfBRyTC9MbUY8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See map</a
+              >
+            </div>
+          </li>
+          <li>Phone: xxx-xxx-xxx</li>
+          <li>Hours: Monday-Saturday, 17:00-23:00</li>
+        </ul>
+      </footer>
+    </aside>
+    <div class="error-container">
+      <h2>OOPS! INTERNAL SERVER ERROR</h2>
+      <h1>500</h1>
+    </section>
+    <%= render "shared/footer" %>
+  </div>

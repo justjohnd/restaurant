@@ -14,6 +14,10 @@
     <% end %>
   </div>
   <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  <div>
     <%= form.submit "Submit", class: "btn mt-16" %>
   </div>
 <% end %>

@@ -1,117 +1,5 @@
 @import 'font-awesome';
 
-$displayTypes: (none, flex, block);
-
-@each $display in $displayTypes {
-  .d-#{display} {
-    display: #{display};
-  }
-}
-
-$spaceAmounts: (6, 12, 16, 20, 24, 28, 36, 48, auto);
-
-@each $space in $spaceAmounts {
-  @if $space==auto {
-    .m-#{$space} {
-      margin: #{$space};
-    }
-
-    .mx-#{$space} {
-      margin-left: #{$space};
-      margin-right: #{$space};
-    }
-
-    .my-#{$space} {
-      margin-top: #{$space};
-      margin-bottom: #{$space};
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space};
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space};
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space};
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space};
-    }
-  } @else {
-    .m-#{$space} {
-      margin: #{$space}px;
-    }
-
-    .mx-#{$space} {
-      margin-left: #{$space}px;
-      margin-right: #{$space}px;
-    }
-
-    .my-#{$space} {
-      margin-top: #{$space}px;
-      margin-bottom: #{$space}px;
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space}px;
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space}px;
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space}px;
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space}px;
-    }
-
-    .p-#{$space} {
-      padding: #{$space}px;
-    }
-
-    .px-#{$space} {
-      padding-left: #{$space}px;
-      padding-right: #{$space}px;
-    }
-
-    .py-#{$space} {
-      padding-top: #{$space}px;
-      padding-bottom: #{$space}px;
-    }
-
-    .pl-#{$space} {
-      padding-left: #{$space}px;
-    }
-
-    .pr-#{$space} {
-      padding-right: #{$space}px;
-    }
-
-    .pb-#{$space} {
-      padding-bottom: #{$space}px;
-    }
-
-    .pt-#{$space} {
-      padding-top: #{$space}px;
-    }
-  }
-}
-
-$displays: (none, block, flex);
-
-@each $display in $displays {
-  .d-#{$display} {
-    display: #{$display};
-  }
-}
-
 $color-primary: #333;
 $color-secondary: #046120;
 $color-active: #7096e7;
@@ -126,12 +14,12 @@ $font-primary: 'Work Sans', sans-serif;
 
 h1 {
   color: $color-primary;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 
@@ -169,12 +57,24 @@ a.menu-item:hover {
   padding: 6px;
 }
 
-//Standard button
 .btn {
-  @include capsule;
   background-color: $color-active;
+  @include capsule;
+  cursor: pointer;
   border: $color-active;
   color: #fff;
+  display: inline-block;
+  font-family: $font-primary;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn:active {
+  background-color: $color-active + 50;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
 }
 
 //Widths for containers
@@ -185,6 +85,107 @@ $medium: 600px;
   margin: 0 auto 100px auto;
   max-width: $width;
   width: 90%;
+}
+
+// Page styles
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0 auto 100px auto;
+
+  & h1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-container {
+    width: 50vw;
+  }
+}
+
+.articles-title {
+  margin-bottom: 20px;
+}
+
+.article {
+  font-weight: 300;
+  width: inherit;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.article-subtitle {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.article-body {
+  margin-bottom: 36px;
+}
+
+.article-body:last-child {
+  margin-bottom: 0;
+}
+
+//Image galleries
+.gallery-con {
+  display: flex;
+  justify-content: center;
+
+  & img {
+    object-fit: cover;
+    padding: 5px;
+  }
+}
+
+.image-1 {
+  width: 330px;
+  height: 280px;
+  margin-top: auto;
+}
+
+.image-2 {
+  width: 270px;
+  height: 400px;
+}
+
+.image-3 {
+  width: 220px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.image-4 {
+  width: 400px;
+  height: 530px;
+}
+
+.image-5 {
+  width: 260px;
+  height: 330px;
+  margin-top: auto;
+}
+
+.image-6 {
+  width: 330px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .gallery-con {
+    display: inline;
+
+    & img {
+      width: 90vw;
+      height: 90vw;
+    }
+  }
 }
 
 //Front page
@@ -370,7 +371,6 @@ $medium: 600px;
 }
 
 .mobile-menu {
-  height: 40vh;
   background-color: $color-primary;
   position: absolute;
   top: 60px;
@@ -382,6 +382,14 @@ $medium: 600px;
   padding: 12px;
   box-sizing: border-box;
   z-index: 1;
+
+  &.short {
+    height: 30vh;
+  }
+
+  &.long {
+    height: 40vh;
+  }
 
   & .menu-item {
     width: 100%;
@@ -528,46 +536,7 @@ $medium: 600px;
   }
 }
 
-//Articles page
-.articles {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90vw;
-  margin: 0 auto 100px auto;
-
-  & h1 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 576px) {
-  .articles {
-    width: 50vw;
-  }
-}
-
-.articles-title {
-  margin-bottom: 20px;
-}
-
-.article {
-  font-weight: 300;
-}
-
-.article-title {
-  font-size: 20px;
-}
-
-.article-author {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.article-body {
-  margin-bottom: 40px;
-}
-
-//Area for edit options for user when logged in
+//Area for edit options on Article page for user when logged in
 .edit-section {
   display: flex;
   justify-content: center;
@@ -586,6 +555,17 @@ $medium: 600px;
 
 .form-input.body-field {
   height: 300px;
+}
+
+.article-image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
 }
 
 // Authentication notices
@@ -655,4 +635,142 @@ $medium: 600px;
 
 .mobile-menu a.account-link {
   color: #fff;
+}
+
+//Reservations page
+.btn-contact {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: unset;
+  height: unset;
+  padding: 12px;
+}
+
+.btn-contact > a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+//Errors pages
+.error-page {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+
+  & .container-aside {
+    height: 100vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+  }
+}
+
+.error-container {
+  text-align: center;
+}
+
+//Utility Classes
+$displayTypes: (none, flex, block);
+
+@each $display in $displayTypes {
+  .d-#{$display} {
+    display: #{$display};
+  }
+}
+
+$spaceAmounts: (6, 12, 16, 20, 24, 28, 36, 48, auto);
+
+@each $space in $spaceAmounts {
+  @if $space==auto {
+    .m-#{$space} {
+      margin: #{$space};
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space};
+      margin-right: #{$space};
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space};
+      margin-bottom: #{$space};
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space};
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space};
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space};
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space};
+    }
+  } @else {
+    .m-#{$space} {
+      margin: #{$space}px;
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space}px;
+      margin-right: #{$space}px;
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space}px;
+      margin-bottom: #{$space}px;
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space}px;
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space}px;
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space}px;
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space}px;
+    }
+
+    .p-#{$space} {
+      padding: #{$space}px;
+    }
+
+    .px-#{$space} {
+      padding-left: #{$space}px;
+      padding-right: #{$space}px;
+    }
+
+    .py-#{$space} {
+      padding-top: #{$space}px;
+      padding-bottom: #{$space}px;
+    }
+
+    .pl-#{$space} {
+      padding-left: #{$space}px;
+    }
+
+    .pr-#{$space} {
+      padding-right: #{$space}px;
+    }
+
+    .pb-#{$space} {
+      padding-bottom: #{$space}px;
+    }
+
+    .pt-#{$space} {
+      padding-top: #{$space}px;
+    }
+  }
 }
