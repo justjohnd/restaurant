@@ -111,10 +111,12 @@ $medium: 600px;
 
 .article {
   font-weight: 300;
+  width: inherit;
 }
 
 .article-title {
   font-size: 20px;
+  font-weight: 400;
 }
 
 .article-subtitle {
@@ -128,6 +130,62 @@ $medium: 600px;
 
 .article-body:last-child {
   margin-bottom: 0;
+}
+
+//Image galleries
+.gallery-con {
+  display: flex;
+  justify-content: center;
+
+  & img {
+    object-fit: cover;
+    padding: 5px;
+  }
+}
+
+.image-1 {
+  width: 330px;
+  height: 280px;
+  margin-top: auto;
+}
+
+.image-2 {
+  width: 270px;
+  height: 400px;
+}
+
+.image-3 {
+  width: 220px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.image-4 {
+  width: 400px;
+  height: 530px;
+}
+
+.image-5 {
+  width: 260px;
+  height: 330px;
+  margin-top: auto;
+}
+
+.image-6 {
+  width: 330px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .gallery-con {
+    display: inline;
+
+    & img {
+      width: 90vw;
+      height: 90vw;
+    }
+  }
 }
 
 //Front page
@@ -570,11 +628,6 @@ $medium: 600px;
 
 .mobile-menu a.account-link {
   color: #fff;
-}
-
-//Food and wine page
-.menu-title {
-  font-weight: 400;
 }
 
 //Reservations page
