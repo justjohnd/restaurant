@@ -371,7 +371,6 @@ $medium: 600px;
 }
 
 .mobile-menu {
-  height: 40vh;
   background-color: $color-primary;
   position: absolute;
   top: 60px;
@@ -383,6 +382,14 @@ $medium: 600px;
   padding: 12px;
   box-sizing: border-box;
   z-index: 1;
+
+  &.short {
+    height: 30vh;
+  }
+
+  &.long {
+    height: 40vh;
+  }
 
   & .menu-item {
     width: 100%;
@@ -667,8 +674,8 @@ $medium: 600px;
 $displayTypes: (none, flex, block);
 
 @each $display in $displayTypes {
-  .d-#{display} {
-    display: #{display};
+  .d-#{$display} {
+    display: #{$display};
   }
 }
 

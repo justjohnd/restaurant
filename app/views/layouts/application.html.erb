@@ -24,5 +24,23 @@
     <% end %>
     <%= yield %>
     <%= javascript_pack_tag 'hamburger' %>
+    <%# Change mobile menu height based on whether user is signed in or not %>
+    <% if user_signed_in? %>
+      <script type="text/javascript" charset="utf-8">
+        const mobile = document.querySelector('.mobile-menu');
+        mobile.classList.add('long');
+          if (mobile.classList.contains('short')) {
+        mobile.classList.remove('short');
+          }
+      </script>
+    <% else %>
+      <script type="text/javascript" charset="utf-8">
+        const mobile = document.querySelector('.mobile-menu');
+        mobile.classList.add('short');
+          if (mobile.classList.contains('long')) {
+        mobile.classList.remove('long');
+          }
+      </script>
+    <% end %>
   </body>
 </html>
