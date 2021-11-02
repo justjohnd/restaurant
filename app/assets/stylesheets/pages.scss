@@ -57,12 +57,24 @@ a.menu-item:hover {
   padding: 6px;
 }
 
-//Standard button
 .btn {
-  @include capsule;
   background-color: $color-active;
+  @include capsule;
+  cursor: pointer;
   border: $color-active;
   color: #fff;
+  display: inline-block;
+  font-family: $font-primary;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn:active {
+  background-color: $color-active + 50;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
 }
 
 //Widths for containers
