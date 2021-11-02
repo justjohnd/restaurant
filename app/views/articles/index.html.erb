@@ -7,6 +7,11 @@
       <li class="article-subtitle">
         By <%= article.user.userName %> - <%= article.created_at.strftime("%d %b. %Y") %>
       </li>
+      <li>
+        <div class="article-image">
+          <%= image_tag(article.image, class: "image") %>
+        </div>
+      </li>
       <li class="article-body">
         <%= truncate(article.body, length: 300) {link_to "...Read More", article}
       %>
