@@ -1,7 +1,5 @@
-<li class="menu-item"><%= link_to("english", root_url(lang: :en))
- %> / <%= link_to("francais", root_url(lang: :fr))
- %></li>
 <li class="menu-item"><%= link_to t('menu_food'), menu_page_path %></li>
 <li class="menu-item"><%= link_to "RESERVATIONS", reservations_page_path %></li>
 <li class="menu-item"><%= link_to "FROM THE VINE", articles_path %></li>
 <li class="menu-item"><%= link_to "ABOUT", about_page_path %></li>
+<li class="menu-item"><%= link_to("english", url_for(lang: :en)) %><span>&nbsp;/&nbsp;</span><%= link_to("francais", url_for(lang: :fr)) %></li>
