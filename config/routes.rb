@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :contacts, only: [:new, :create]
+
   get "/pages/:page" => "pages#show"
   get "pages/menu", :as => "menu_page"
   get "pages/about", :as => "about_page"
