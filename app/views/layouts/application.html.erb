@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Restaurant</title>
+    <title>Aster Reste</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %> <%= csp_meta_tag %>
     <!--  -->
@@ -15,6 +15,7 @@
     <%= stylesheet_link_tag 'application',
     'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500;700&display=swap'
     %>
+    <%= favicon_link_tag asset_path('magnolia.ico') %>
   </head>
   <body>
     <% if flash[:notice] %>

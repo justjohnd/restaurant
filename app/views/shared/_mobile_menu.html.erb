@@ -10,11 +10,7 @@
   <ul class="mobile-menu d-none">
     <%= render "shared/nav_menu" %>
     <div class="mobile-socials-wrapper">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-        <%= fa_icon 'facebook', :class => 'mobile-social' %>
-      </a>
-      <%= fa_icon 'instagram', :class => 'mobile-social' %>
-      <%= fa_icon 'twitter', :class => 'mobile-social' %>
+      <%= render "shared/socials" %>
     </div>
     <li class="menu-item">
       <% if user_signed_in? %>

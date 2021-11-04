@@ -14,8 +14,7 @@
       <footer class="footer-aside">
         <ul>
           <li class="mb-12">
-            <div>Refshalevej 96</div>
-            <div>1432 Copenhagen K</div>
+            <div>81. Tarn. France. </div>
             <div>
               <a
                 href="https://goo.gl/maps/qivmSfBRyTC9MbUY8"
@@ -34,11 +33,7 @@
     <div class="front-page-img-wrapper">
       <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
       <div class="socials-wrapper">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <%= fa_icon 'facebook', :class => 'social' %>
-        </a>
-        <%= fa_icon 'instagram', :class => 'social' %>
-        <%= fa_icon 'twitter', :class => 'social' %>
+        <%= render "shared/socials" %>
       </div>
     </div>
   </section>

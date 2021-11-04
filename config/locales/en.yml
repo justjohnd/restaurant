@@ -34,3 +34,12 @@ en:
   see_map: "See map"
   winter: "WINTER SEASON"
   menu_food: "FOOD AND WINE"
+
+  # Reservations page
+  reservations: "reservations"
+  res_description_html: "<p>We are a private dining experience, with seats available only by reservation. You can purchase tickets for your dinner by indicating the number of people in your group, which menu choice you prefer, and the date you wish to dine with us.
+  </p><br/><p> We will send a link to purchase your tickets online, along with the details of the location for your dinner.</p>"
+
+  contact_info: "Please choose your date and indicate the number of people in your group."
+
+  form_name: "Name"

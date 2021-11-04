@@ -1,12 +1,7 @@
 <%= render "shared/mobile_menu" %>
 <header class="banner">
   <div class="socials-wrapper">
-    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-      <%= fa_icon 'facebook', :class => 'social d-block' %>
-    </a>
-    <%= fa_icon 'instagram', :class => 'social d-block' %>
-    <%= fa_icon 'twitter', :class => 'social d-block' %>
-  </div>
+  <%= render "shared/socials" %>
   <%= image_tag "cover-img-1200.jpg", :class => "front-page-img"%>
   <%= render "shared/logout_links" %>
   <nav class="banner-nav-wrapper">
@@ -14,7 +9,7 @@
     <div class="menu-wrapper">
       <ul class="menu">
         <li class="menu-item"><%= link_to t('menu_food'), menu_page_path %></li>
-        <li class="menu-item"><%= link_to "RESERVATIONS", reservations_page_path %></li>
+        <li class="menu-item"><%= link_to "RESERVATIONS", contact_page_path %></li>
         <li class="menu-item"><%= link_to "FROM THE VINE", articles_path %></li>
         <li class="menu-item"><%= link_to "ABOUT", about_page_path %></li>
       </ul>
