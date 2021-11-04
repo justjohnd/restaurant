@@ -31,7 +31,16 @@
       </footer>
     </aside>
     <h1 class="mobile-site-name site-name">Aster</h1>
-    <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
+    <div class="front-page-img-wrapper">
+      <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
+      <div class="socials-wrapper">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <%= fa_icon 'facebook', :class => 'social' %>
+        </a>
+        <%= fa_icon 'instagram', :class => 'social' %>
+        <%= fa_icon 'twitter', :class => 'social' %>
+      </div>
+    </div>
   </section>
   <%= render "shared/footer" %>
 </div>
