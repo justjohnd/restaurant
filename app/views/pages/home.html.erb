@@ -1,11 +1,10 @@
 <div class="front-page-wrapper">
   <%= render "shared/logout_links" %>
   <%= render "shared/mobile_menu" %>
-  <h1 class="mobile-site-name site-name">le gardin du josh</h1>
   <section class="front-page">
     <aside class="container-aside">
       <header>
-        <div class="site-name">le gardin du josh</div>
+        <div class="site-name">Aster</div>
         <nav>
           <ul class="menu">
             <%= render "shared/nav_menu" %>
@@ -15,8 +14,7 @@
       <footer class="footer-aside">
         <ul>
           <li class="mb-12">
-            <div>Refshalevej 96</div>
-            <div>1432 Copenhagen K</div>
+            <div>81. Tarn. France. </div>
             <div>
               <a
                 href="https://goo.gl/maps/qivmSfBRyTC9MbUY8"
@@ -31,7 +29,13 @@
         </ul>
       </footer>
     </aside>
-    <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
+    <h1 class="mobile-site-name site-name">Aster</h1>
+    <div class="front-page-img-wrapper">
+      <%= image_tag("cover-img.jpg", :class => "front-page-img") %>
+      <div class="socials-wrapper">
+        <%= render "shared/socials" %>
+      </div>
+    </div>
   </section>
   <%= render "shared/footer" %>
 </div>

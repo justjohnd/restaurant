@@ -3,3 +3,12 @@ fr:
   see_map: "Voir la Carte"
   winter: "L'hiver"
   menu_food: "NOURRITURE ET VIN"
+
+  # Reservations
+  reservations: "réserver une table"
+  res_description_html: "<p>Nous sommes un événement de dîner privé, avec des places disponibles uniquement sur réservation. Vous pouvez acheter des billets pour votre dîner en indiquant le nombre de personnes dans votre groupe, le choix de menu que vous préférez et la date à laquelle vous souhaitez dîner avec nous.
+  </p><br/><p>Nous vous enverrons un lien pour acheter vos billets en ligne, ainsi que les détails du lieu de votre dîner. </p>"
+
+  contact_info: "Veuillez indiquer la date et le nombre de personnes dans votre groupe."
+
+  form_name: "Nom"

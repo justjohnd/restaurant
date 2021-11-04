@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+<section class="page-container">
+  <h1 class="page-title mb-36"><%= t('reservations') %></h1>
+  <div class="article mb-36">
+    <div class="article-body mb-12">
+      <%= t('res_description_html') %>
+    </div>
+  </div>
+  <div class="article mb-36">
+    <div class="article-title ">
+      CANCELLATION POLICY</div>
+    <div class="article-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <h1 class="article-title">CONTACT FORM</h1>
+  <p class="mb-12"><%= t('contact_info') %></p>
+  <%= form_for @contact do |f| %>
+    <div class="field">
+      <%= f.label t('form_name') %></br>
+    <%= f.text_field  :name, required: true, class: "contact-form-text-area form-input" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %></br>
+  <%= f.text_field :email, required: true, class: "contact-form-text-area form-input" %>
+</div>
+<div class="field">
+  <%= f.label :message %></br>
+<%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area form-input body-field", placeholder: "Send us a message"%>
+</div>
+<div class= "d-none">
+  <%= f.label :nickname %>
+  <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+</div>
+<%= f.submit 'Send Message', class: 'btn' %>
+<% end %>
+</section>
+<%= render "shared/footer_with_wrapper" %>

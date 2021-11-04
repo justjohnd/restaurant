@@ -1,11 +1,21 @@
 <%= render "shared/mobile_menu" %>
 <header class="banner">
+  <div class="socials-wrapper">
+  <%= render "shared/socials" %>
   <%= image_tag "cover-img-1200.jpg", :class => "front-page-img"%>
   <%= render "shared/logout_links" %>
   <nav class="banner-nav-wrapper">
-    <div class="site-name"><%= link_to "le gardin du josh", root_path %></div>
-    <ul class="menu">
-      <%= render "shared/nav_menu" %>
-    </ul>
+    <div class="site-name"><%= link_to "Aster", root_path %></div>
+    <div class="menu-wrapper">
+      <ul class="menu">
+        <li class="menu-item"><%= link_to t('menu_food'), menu_page_path %></li>
+        <li class="menu-item"><%= link_to "RESERVATIONS", contact_page_path %></li>
+        <li class="menu-item"><%= link_to "FROM THE VINE", articles_path %></li>
+        <li class="menu-item"><%= link_to "ABOUT", about_page_path %></li>
+      </ul>
+      <div class="menu menu-item"><%= link_to("english", url_for(lang: :en))
+ %><span>&nbsp;/&nbsp;</span><%= link_to("francais", url_for(lang: :fr))
+ %></div>
+    </div>
   </nav>
 </header>

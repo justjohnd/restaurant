@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Restaurant</title>
+    <title>Aster Reste</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %> <%= csp_meta_tag %>
     <!--  -->
@@ -15,12 +15,22 @@
     <%= stylesheet_link_tag 'application',
     'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500;700&display=swap'
     %>
+    <%= favicon_link_tag asset_path('magnolia.ico') %>
   </head>
   <body>
     <% if flash[:notice] %>
       <p class="notice"><%= notice %></p>
     <% end %> <% if flash[:alert] %>
       <p class="alert"><%= alert %></p>
+    <% end %>
+    <%# Flash notice for contact form %>
+    <% if flash[:alert] %>
+      <div class="container">
+        <br>
+        <% flash.each do |key, message| %>
+          <p class="alert alert-<%= key %>"><%= message %></p>
+        <% end %>
+      </div>
     <% end %>
     <%= yield %>
     <%= javascript_pack_tag 'hamburger' %>

@@ -76,5 +76,10 @@ Rails.application.configure do
 
   #Set default mailer for devise in development
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Add mail test environment. To use, open another terminal and enter 'mailcatcher'. Then enter the following into your browser: http://127.0.0.1:1080/
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
   
 end
