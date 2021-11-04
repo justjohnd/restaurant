@@ -284,6 +284,20 @@ $medium: 600px;
   padding: 12px;
 }
 
+.socials-wrapper {
+  display: none;
+}
+
+.mobile-socials-wrapper {
+  margin: 0 auto;
+  color: #fff;
+}
+
+.mobile-social {
+  color: #fff;
+  margin: 8px;
+}
+
 @media (min-width: 576px) {
   .front-page-img {
     padding: 0;
@@ -304,12 +318,14 @@ $medium: 600px;
     top: 32px;
     right: 32px;
     z-index: 10;
+    display: block;
   }
 
   .social {
     font-size: 24px;
     margin-bottom: 8px;
     color: $color-secondary;
+    display: block;
   }
 
   .social:hover {
