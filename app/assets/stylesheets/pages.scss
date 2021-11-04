@@ -308,7 +308,6 @@ $medium: 600px;
 
   .social {
     font-size: 24px;
-    display: block;
     margin-bottom: 8px;
     color: $color-secondary;
   }
@@ -563,6 +562,14 @@ $medium: 600px;
     margin: 8px;
   }
 
+  & .menu-item:last-child {
+    margin-right: 0;
+  }
+
+  & .menu-item:first-child {
+    margin-left: 0;
+  }
+
   & .menu-item > a {
     color: #fff;
   }
@@ -575,7 +582,7 @@ $medium: 600px;
     width: 100%;
     height: auto;
     display: block;
-    padding: 0 20px;
+    padding: 0 32px;
     box-sizing: border-box;
   }
 
