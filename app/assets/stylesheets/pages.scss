@@ -184,6 +184,7 @@ $medium: 600px;
     & img {
       width: 90vw;
       height: 90vw;
+      padding: 5px 0;
     }
   }
 }
@@ -201,7 +202,7 @@ $medium: 600px;
   width: 100%;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .front-page {
     display: flex;
     justify-content: space-between;
@@ -247,9 +248,7 @@ $medium: 600px;
   .site-name {
     margin: 0 0 16px 0;
   }
-}
 
-@media (min-width: 576px) {
   .site-name.mobile-site-name {
     display: none;
   }
@@ -445,7 +444,8 @@ $medium: 600px;
   z-index: 1;
 
   &.short {
-    height: 32vh;
+    // height: 32vh; 32vh is perfect but cuts off some of the menu on small screens
+    height: auto;
   }
 
   &.long {
@@ -601,7 +601,9 @@ $medium: 600px;
     padding: 0 32px;
     box-sizing: border-box;
   }
+}
 
+@media (min-width: 768px) {
   .banner-nav-wrapper .menu {
     display: flex;
     justify-content: start;
