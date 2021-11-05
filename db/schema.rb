@@ -77,5 +77,4 @@ ActiveRecord::Schema.define(version: 2021_11_05_020115) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "articles", "users", on_delete: :cascade
   add_foreign_key "comments", "articles"
-  add_foreign_key "comments", "articles", on_delete: :cascade
 end
