@@ -2,7 +2,7 @@
 <section class="page-container">
   <h1><%= @article.title %></h1>
   <p class="article-subtitle">
-    By <%= @article.user.userName %> - <%= @article.created_at.strftime("%d %b. %Y") %>
+    By <%= @article.user.username %> - <%= @article.created_at.strftime("%d %b. %Y") %>
   </p>
   <div class="article-image">
     <%= image_tag(@article.image, class: "image") %>
