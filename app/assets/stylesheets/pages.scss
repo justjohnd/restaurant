@@ -670,10 +670,15 @@ $medium: 600px;
   margin-bottom: 16px;
 }
 
-.form-input {
+.form-input,
+.field select {
   margin-top: 8px;
   @include capsule;
   box-sizing: border-box;
+}
+
+.field select {
+  width: unset;
 }
 
 .field-confirm {
