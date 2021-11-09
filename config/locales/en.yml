@@ -43,3 +43,5 @@ en:
   contact_info: "Please choose your date and indicate the number of people in your group."
 
   form_name: "Name"
+  form_date: "Select your date"
+  form_number: "Number of people"

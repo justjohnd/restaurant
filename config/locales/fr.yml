@@ -12,3 +12,5 @@ fr:
   contact_info: "Veuillez indiquer la date et le nombre de personnes dans votre groupe."
 
   form_name: "Nom"
+  form_date: "Sélectionnez votre date"
+  form_number: "Nombre de personnes"
