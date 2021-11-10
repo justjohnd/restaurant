@@ -67,3 +67,6 @@ gem 'devise'
 
 #Add MailForm for to send email from app
 gem 'mail_form'
+
+# Add Simple form for client side validations
+gem 'simple_form'

@@ -15,22 +15,22 @@
   </div>
   <h1 class="article-title">CONTACT FORM</h1>
   <p class="mb-12"><%= t('contact_info') %></p>
-  <%= form_for @contact do |f| %>
+  <%= simple_form_for @contact do |f| %>
     <div class="field">
       <%= f.label t('form_name') %></br>
     <%= f.text_field  :name, required: true, class: "contact-form-text-area form-input" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email, required: true, class: "contact-form-text-area form-input" %>
+    <%= f.label t('form_number') %><br />
+    <%= f.select :number, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], include_blank: true, required: false, class: "form-input contact-form-text-area" %>
   </div>
   <div class="field">
     <%= f.label t('form_date') %><br />
     <%= f.date_field :date, required: false, class: "contact-form-text-area form-input" %>
   </div>
   <div class="field">
-    <%= f.label t('form_number') %><br />
-    <%= f.select :number, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], include_blank: true, required: false, class: "form-input contact-form-text-area" %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, required: true, class: "contact-form-text-area form-input" %>
   </div>
   <div class="field">
     <%= f.label :message %><br />
