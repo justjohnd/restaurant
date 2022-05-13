@@ -1,24 +1,6 @@
-# README
+# A few notes on how to get around this app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start up the app on the local server: `bin/rails server`. Note that you have to manually reload the browser to see your changes.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Partials for items like headers and footers are under `app/views/shared`
+- Translations are located under `app/config/locals`

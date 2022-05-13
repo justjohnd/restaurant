@@ -3,6 +3,9 @@ fr:
   see_map: "Voir la Carte"
   winter: "L'hiver"
   menu_food: "NOURRITURE ET VIN"
+  menu_reservations: "RESERVATIONS"
+  menu_blog: "DE LA VIGNE"
+  menu_about: "A PROPOS"
 
   # Reservations
   reservations: "réserver une table"
