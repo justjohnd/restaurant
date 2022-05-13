@@ -1,11 +1,25 @@
 fr:
-  hello: "Hello world"
-  see_map: "Voir la Carte"
-  winter: "L'hiver"
   menu_food: "NOURRITURE ET VIN"
   menu_reservations: "RESERVATIONS"
   menu_blog: "DE LA VIGNE"
   menu_about: "A PROPOS"
+
+  footer_phone: "Téléphoner"
+  footer_hours: "Les heures"
+  footer_monday: "Lundi"
+  footer_saturday: "Samedi"
+  see_map: "Voir la Carte"
+
+  menu_pg_title: "MENUS"
+  menu_pg_season: "L'HIVER"
+  menu_pg_period: "21 décembre - 21 mars"
+  menu_pg_desc: "Ce menu sera une célébration de l'abondance automnale et de la période de l'année où la viande jouera un rôle de premier plan au noma. Attendez-vous à beaucoup de verdure et de fleurs préservées que nous avons cueillies au cours de l'été, ainsi que des champignons, des baies et tout ce que la forêt a à offrir."
+  menu_pg_menu: "Menu: 2800 DKK"
+  menu_pg_wine: "Accord Vin: 1800 DKK"
+  menu_pg_juice: "Accord Jus: 1000 DKK"
+
+  menu_pg_wines: "VINS"
+  menu_pg_wine_desc: "Nos vins présentent la plus splendide gamme de raisins de campagne juteux. Vous ne pourrez pas vous lasser de nos vins. Essayez un verre ou une bouteille ! Ramenez-en chez vous et profitez de la richesse de notre campagne un jour de pluie"
 
   # Reservations
   reservations: "réserver une table"
