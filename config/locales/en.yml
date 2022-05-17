@@ -41,7 +41,7 @@ en:
   footer_saturday: "Saturday"
   see_map: "See map"
 
-  menu_pg_title: "MENUS"
+  menu_pg_title: "menus"
   menu_pg_season: "WINTER SEASON"
   menu_pg_period: "December 21st - March 21st"
   menu_pg_desc: "This menu will be a celebration of fall abundance and the period of the year when meat will play a starring role at noma. Expect lots of preserved greens and flowers that we have foraged over the summer, together with mushrooms, berries and everything the forest has to offer."
@@ -53,7 +53,7 @@ en:
   menu_pg_wine_desc: "Our cellar holds over 15,000 bottles—with the most-ordered few thousand bottles staying in a smaller, more accessible cellar. The wine program has held Wine Spectator's Grand Award since 2007. But the powers-that-be don’t let it go to anyone's head."
 
   # About page
-  about_title: "ABOUT US"
+  about_title: "about us"
   about_body_1: "Aster is a private dining event located near the glowing lights of Cordes Sur Ciel, in an undisclosed location, every Saturday night."
   about_body_2: "Reservations required. Seating is limited to 18 per night."
   about_body_3: "We open on November 20th and hope to see you soon."
@@ -73,3 +73,6 @@ en:
   form_name: "Name"
   form_date: "Select your date"
   form_number: "Number of people"
+
+  # Blog page ("From the Vine")
+  blog_title: "recent news"
