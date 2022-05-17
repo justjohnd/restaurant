@@ -1,33 +1,33 @@
 <%= render "shared/header" %>
 <section class="page-container">
-  <h1 class="page-title mb-36">ABOUT US</h1>
+  <h1 class="page-title mb-36"><%= t('about_title') %></h1>
   <div class="article mb-36">
     <%# <div class="article-title ">
       It all started in a sleepy little town called Portland...</div> %>
     <div class="article-body">
-      <p>Aster is a private dining event located near the glowing lights of Cordes Sur Ciel, in an undisclosed location, every Saturday night.</p>
+      <p><%= t('about_body_1') %></p>
       <br/>
-      <p>Reservations required. Seating is limited to 18 per night.</p>
+      <p><%= t('about_body_2') %></p>
       <br/>
-      <p>We open on November 20th and hope to see you soon. </p>
+      <p><%= t('about_body_3') %></p>
       <br/>
     </div>
   </div>
   <div class="article mb-36">
     <div class="article-title ">
-      Contact Information</div>
+      <%= t('about_con_title') %></div>
     <br/>
     <div class="article-body">
-      <p>Please feel free to contact us at xxx-xxxx-xxxx or by email. Our physical address is:</p>
+      <p><%= t('about_con_body') %></p>
       <br/>
-      <p>Refshalevej 96</p>
-      <p>1432 Copenhagen K</p>
+      <p><%= t('about_add_1') %></p>
+      <p><%= t('about_add_2') %></p>
       <p>
         <a
           href="https://goo.gl/maps/qivmSfBRyTC9MbUY8"
           target="_blank"
           rel="noopener noreferrer"
-          >Or find us on Google Maps</a
+          ><%= t('about_map') %></a
         >
       </p>
     </div>

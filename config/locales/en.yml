@@ -52,6 +52,16 @@ en:
   menu_pg_wines: "WINES"
   menu_pg_wine_desc: "Our cellar holds over 15,000 bottles—with the most-ordered few thousand bottles staying in a smaller, more accessible cellar. The wine program has held Wine Spectator's Grand Award since 2007. But the powers-that-be don’t let it go to anyone's head."
 
+  # About page
+  about_title: "ABOUT US"
+  about_body_1: "Aster is a private dining event located near the glowing lights of Cordes Sur Ciel, in an undisclosed location, every Saturday night."
+  about_body_2: "Reservations required. Seating is limited to 18 per night."
+  about_body_3: "We open on November 20th and hope to see you soon."
+  about_con_title: "Contact Information"
+  about_con_body: "Please feel free to contact us at xxx-xxxx-xxxx or by email. Our physical address is:"
+  about_add_1: "Refshalevej 96"
+  about_add_2: "1432 Copenhagen K"
+  about_map: "Or find us on Google Maps"
 
   # Reservations page
   reservations: "contact and reservations"

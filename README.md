@@ -5,15 +5,17 @@ To start up the app on the local server: `bin/rails server`. Note that you have 
 Note that translations have not been set up for blog posts.
 
 - The blog page ("FROM THE VINE") is located under `views/articles/index.html.erb`
+- The RESERVATIONS page is located under `app/views/contacts/new.html.erb`
 - Partials for items like headers and footers are under `app/views/shared`
 - Translations are located under `app/config/locals`
 
 ## User access
 
-The users of this site are intended only to be administrators--people who can add blog posts, etc.
+The users of this site are intended only to be administrators--people who can add blog posts, etc. For admin login and password, see the `.env` file.
 
 - To access the Sign In or Sign Up pages, enter `localhost:3000/users/sign_in` and `localhost:3000/users/sign_up` respectively
 - Type `bin/rails console` to access the database, in order to directly add, delete, or edit files, such as users.
+- **WARNING** Deleting a user will delete all associated blog posts as well! -**NOTE** French translations will not appear when logged in
 
 # Helpful methods and modifying the database via irb
 

@@ -21,10 +21,20 @@ fr:
   menu_pg_wines: "VINS"
   menu_pg_wine_desc: "Notre cave contient plus de 15 000 bouteilles, les quelques milliers de bouteilles les plus commandées restant dans une cave plus petite et plus accessible. Depuis 2007, le programme des vins organise le Grand Prix du Wine Spectator. Mais les pouvoirs en place ne le laissent monter à la tête de personne."
 
-  # Reservations
+  # About page
+  about_title: "À PROPOS DE NOUS"
+  about_body_1: "Aster est un événement gastronomique privé situé près des lumières rougeoyantes de Cordes Sur Ciel, dans un lieu tenu secret, tous les samedis soirs."
+  about_body_2: "Réservations requises. Le nombre de places est limité à 18 par nuit."
+  about_body_3: "Nous ouvrons le 20 novembre et espérons vous voir bientôt."
+  about_con_title: "Coordonnées"
+  about_con_body: "N'hésitez pas à nous contacter au xxx-xxxx-xxxx ou par email. Notre adresse physique est :"
+  about_add_1: "Refshalevej 96"
+  about_add_2: "1432 Copenhagen K"
+  about_map: "Ou retrouvez-nous sur Google Maps"
+
+  # Reservations page
   reservations: "réserver une table"
-  res_description_html: "<p>Nous sommes un événement de dîner privé, avec des places disponibles uniquement sur réservation. Vous pouvez acheter des billets pour votre dîner en indiquant le nombre de personnes dans votre groupe, le choix de menu que vous préférez et la date à laquelle vous souhaitez dîner avec nous.
-  </p><br/><p>Nous vous enverrons un lien pour acheter vos billets en ligne, ainsi que les détails du lieu de votre dîner. </p>"
+  res_description_html: "<p>Nous sommes un événement de dîner privé, avec des places disponibles uniquement sur réservation. Vous pouvez acheter des billets pour votre dîner en indiquant le nombre de personnes dans votre groupe, le choix de menu que vous préférez et la date à laquelle vous souhaitez dîner avec nous.</p><br/><p>Nous vous enverrons un lien pour acheter vos billets en ligne, ainsi que les détails du lieu de votre dîner. </p>"
 
   contact_info: "Veuillez indiquer la date et le nombre de personnes dans votre groupe."
 
